@@ -8,8 +8,46 @@ body{
     font-family: "Cairo", sans-serif;
     font-weight: 500;
 }
-.roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
+/* Start Navbar styling */
+.nav-con {
+    background-color: var(--maincolor);
+    width: 100%!important;
+}
+.nav-con .container-fluid .navbar-brand {
+    background-image: linear-gradient(to right,var(--orange),var(--orange) 39%, #00bcd4 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+.nav-con nav .collapse li a:hover {
+    color: var(--orange)!important;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.nav-con nav .collapse li a{
+    letter-spacing: 2px;
+}
+.nav-con button{
+    color: white !important;
+    border-color: white;
+}
+.nav-con .login:hover{
+    background-color: var(--orange);
+}
+.nav-con .navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
+.nav-con .navbar-toggler {
+    border-color:#203a4f !important;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    border-width: 2px;
+}
+/* End Navbar styling */
