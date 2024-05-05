@@ -7,6 +7,7 @@
 body{
     font-family: "Cairo", sans-serif;
     font-weight: 500;
+    box-sizing: border-box;
 }
 /* Start Navbar styling */
 .nav-con {
@@ -51,3 +52,79 @@ body{
     border-width: 2px;
 }
 /* End Navbar styling */
+/* Strat aboutus styling */
+.Aboutus .head{
+    background-image:  url(/images/rm373batch13-085.jpg);
+    min-height: 300px;
+    background-size: cover;
+    
+}
+.Aboutus .head::after{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000008a;
+    width: 100%;
+    height: 100%;
+}
+.Aboutus .head::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    background-image: linear-gradient(to top, black, green, red, blue, white);
+    width: 2px;
+    height: 40%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+.Aboutus .head .text{
+    color: white;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.Aboutus .head .text{
+    font-size: 40px;
+    font-weight: bold;
+}
+.Aboutus .head .text .flexcareer{
+    color: var(--maincolor);
+}
+.Aboutus .head .text .flexcareer .flex{
+    color: var(--orange );
+}
+.Aboutus .container-fluid .image img{
+    /* max-width: 400px; */
+}
+.Aboutus .container-fluid .text{
+    max-width: 600px;
+    padding-left: 100px;
+    padding-top: 50px;
+} 
+.Aboutus .container-fluid .text span{
+    color: var(--maincolor);
+}
+.Aboutus .container-fluid .text p{
+    font-size: 17px;
+}
+@media (max-width:567px) {
+    .Aboutus .container-fluid .text{
+        padding: 0;
+        max-width: 200px;
+        text-align: center;
+    }
+    .Aboutus .container-fluid .right img{
+        display: none;
+    }
+    .Aboutus .container-fluid .left text{
+        /* width: 100%
+        padding====; */
+    }
+}
+/* End of aboutus styling */
