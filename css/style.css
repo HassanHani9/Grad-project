@@ -2,13 +2,15 @@
   --maincolor: #1c79c0;
   --lightblue: #0389ff;
   --orange: #ff9933;
+  --white:#eff8fd;
+  --black:#000000;
 }
 body {
   font-family: "Cairo", sans-serif;
   font-weight: 500;
   box-sizing: border-box;
 }
-/* Start Navbar styling */
+/*......................... Start Navbar styling .........................*/
 .nav-con {
   background-color: var(--maincolor);
   width: 100% !important;
@@ -55,7 +57,179 @@ body {
   -o-border-radius: 10%;
   border-width: 2px;
 }
-/* End Navbar styling */
+/* .........................End Navbar styling .........................*/
+
+/* .........................Start homesection .........................*/
+.homeUserViewPort{
+  background-image: url(../images/check4.jpg);
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: 100%;
+  background-position: center;
+   height: 100vh;
+   position: relative;
+}
+
+.homeUserViewPortLayer{
+   background-color: rgb(0, 0, 0,0.8);
+   position: absolute;
+   inset: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.homeUserViewPortLayerCaption{
+   color: white;
+   text-align: center;
+}
+
+
+
+.homeUserViewPortLayerCaption h1{
+  font-size: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid white;
+ animation: appear 1.5s ease-in-out forwards, cursor 7s forwards ;
+  
+}
+
+.homeUserCapUni{
+   color:var(--orange)
+}
+
+.homeUserViewPortLayerCaption p{
+   font-size: 22px;
+   white-space: nowrap;
+   overflow: hidden;
+   width: 0px;
+   animation: appear 1.5s 1.5s ease-in-out forwards , cursor 9s  forwards;
+   -webkit-animation: appear 1.5s 1.5s ease-in-out forwards , cursor 5s  ;
+}
+@keyframes appear {
+   0% {
+       width: 0px;
+   }
+   100% {
+       width: 290px;
+       
+   }
+}
+@keyframes cursor {
+
+   0%{
+       border-right: 1px solid white;
+   }
+
+   100%{
+       border-right: 1px solid transparent;
+   }
+   
+}
+
+
+/* .........................End homesection .........................*/
+
+/* .........................Start Services section .........................*/
+.services .heading{
+  text-align:center;
+  color: var(--maincolor);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  padding: 1rem;
+  }
+  .services .heading span{
+  color: var(--black);
+  text-transform: uppercase;
+  padding: .7rem;
+  }
+  .services p{
+      color: var(--black);
+      padding: 0.1rem;
+      text-align:center;
+      padding-bottom: 1rem;
+      font-size: 1.5rem;
+  }
+  .card_content{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  .services .card_content .box{
+      overflow: hidden; 
+      width: 20rem;
+      height: 20rem;
+      position: relative;
+      margin: 1rem;
+      margin-bottom: 3rem;
+      padding: 1rem;
+      background-size: cover;
+      color: var(--white);
+      border-radius: 18px;
+      box-shadow:  var(--black) 0px 11px 15px 0px;
+      text-align: center;
+  }
+  .services .card_content .box .card-img{
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      border-radius: 18px;
+      object-fit: cover;
+  }
+  .services .card_content .box .content{
+      position:absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 1.5rem;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:rgba(255, 123, 0, 0.8) ;
+      opacity: 0;
+      border-radius: 18px;
+      transition: 0.3s;
+      }
+  
+  .services .card_content .box:hover .content{
+      opacity: 1;
+  }
+  #btn{
+      padding: .6rem 1.3rem;
+      text-decoration: none;
+      background: none;
+      border: 2px #fff solid;
+      border-radius: 18px;
+      color: var(--white);
+      letter-spacing: 1px;
+  }
+  #btn:hover{
+      background-color: var(--lightblue);
+      }
+      
+      .box h1{
+      font-size: 2.5rem;
+      }
+      .box #btn{
+      font-size: 1.2rem;
+      }
+      .box #btn, .box h1{
+      transition: .3s;
+      transform: translateY(-20px);
+      }
+      
+      .box:hover #btn , .box:hover h1{
+      transform: translateY(0);
+      }
+/* .........................End services section .........................*/
+
 /* Strat aboutus styling */
 .Aboutus .head {
   background-image: url(/images/rm373batch13-085.jpg);
@@ -117,11 +291,348 @@ body {
 @media (max-width: 567px) {
   .Aboutus .container-fluid .text {
     padding: 0;
-    max-width: 200px;
+    /* max-width: 200px; */
     text-align: center;
   }
   .Aboutus .container-fluid .right img {
     display: none;
   }
 }
-/* End of aboutus styling */
+/* .........................End of aboutus styling .........................*/
+/* .........................Start of contactus styling .........................*/
+#contact{
+
+  padding: 80px;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+
+#contact .contactCap h2{
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #7F7F90;
+}
+
+.contactCap p{
+  font-size: 33px;
+  margin-bottom:30px ;
+}
+
+.contactUni{
+  color: var(--maincolor);
+}
+
+.mapContainer{
+ 
+  width:94%;
+  margin: auto;
+
+}
+
+.actualMap{
+  width: 100%;
+  height: 350px;
+}
+#contact .contactForm{
+    
+  width:94% ;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px  20px rgba(104, 102, 102, 0.1);
+}
+
+.nameEmail{
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.contactForm .ContactName{
+  width: 50%;
+  padding: 15px;
+  border: 2px solid #E8E3E3;
+  outline: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.ContactEmail{
+  width: 50%;
+  padding: 15px;
+  border: 2px solid #E8E3E3;
+  outline: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.contactMethods{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+
+display: flex;
+
+/* flex-wrap: wrap; */
+}
+.contactCardContainer{
+  padding: 5px;
+
+  width: 50%;
+
+}
+
+.contactCard{
+  background-color: #F5F5F5;
+  text-align: left;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  /* width: 50%; */
+  
+}
+.contactCardIcon{
+  background-color: var(--maincolor);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 19px;
+}
+.contactCardcap{
+  color: #7D7D7D;
+}
+
+.contactCardcap h3{
+  font-size: 23px;
+  font-weight: 700px;
+  padding-bottom: 5px;
+}
+
+.contactCardcap a{
+  color:#7D7D7D ;
+}
+
+.contactSub{
+  padding-bottom: 10px;
+}
+
+.contactSub .subject{
+  width: 100%;
+  padding:15px ;
+  border: 2px solid #E8E3E3;
+  outline: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.contactTextarea{
+  width: 100%;
+  padding: 15px;
+  resize: none;
+  border: 2px solid #E8E3E3;
+  outline: none;
+  transition:0.5s ;
+  -webkit-transition:0.5s ;
+  -moz-transition:0.5s ;
+  -ms-transition:0.5s ;
+  -o-transition:0.5s ;
+}
+
+
+.contactSubBtn{
+  background-color: var(--maincolor);
+  color: white;
+  border: none;
+  padding:15px 40px ;
+  font-size: 14px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-top: 20px;
+  transition:0.5s ;
+  
+}
+.contactSubBtn:hover{
+  background-color: var(--lightBlue);
+}
+
+input[type=text]:focus {
+  border: 2px solid var(--lightBlue);
+ }
+input[type=email]:focus {
+  border: 2px solid var(--lightBlue);
+ }
+
+ textarea:focus{
+  border: 2px solid var(--lightBlue);
+ }
+
+ @media screen and (max-width:768px){
+  .mapContainer{
+      width: 100%;
+  }
+
+  .contactMethods{
+    
+    
+   flex-wrap: wrap;
+  }
+  .contactCardContainer{
+    
+  
+      width: 100%;
+  
+  }
+
+ 
+  .nameEmail{
+      flex-wrap: wrap;
+  }
+  
+  .ContactName{
+      width: 100%;
+  }
+  .ContactEmail{
+      width: 100%;
+  }
+
+  .contactSubBtn{
+      background-color: var(--mainColor);
+      color: white;
+      border: none;
+      padding:10px 20px ;
+      font-size: 14px;
+      border-radius: 30px;
+  }
+
+
+
+ }
+
+
+
+
+
+
+ @media screen and (min-width:768px) and (max-width:992px){
+
+
+  .mapContainer{
+      width: 50%;
+  }
+
+  .contactMethods{
+    
+    
+   flex-wrap: wrap;
+  }
+  .contactCardContainer{
+    
+  
+      width: 50%;
+  
+  }
+
+  /* .nameEmail{
+      flex-wrap: wrap;
+  } */
+  
+  .name{
+      width: 50%;
+  }
+  .email{
+      width: 50%;
+  }
+
+
+
+
+ }
+
+/* .........................End of contactus styling .........................*/
+/* .........................Start Footer .........................*/
+footer{
+  background: #091E3E; 
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+}
+.footer .footer-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+  gap: 1.5rem;
+  padding: 4.5rem;
+}
+
+.footer .footer-container .box h3{
+  font-size: 1.7rem;
+  padding: .5rem .1rem;
+  color: var(--white);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.footer .footer-container .box p{
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: var(--white);
+  border-bottom: .2rem solid rgba(249, 248, 248, 0.1);
+}
+
+.box .social-links li{
+display: inline-block;
+height: 40px;
+width: 40px;
+background-color:var(--lightblue);
+margin:10px 10px 10px 0;
+text-align: center;
+line-height: 40px;
+border-radius: 50%;
+  border: .1rem solid rgba(0, 0, 0, 0.1);
+transition: all 0.5s ease;
+}
+
+.box .social-links li:hover{
+color: var(--second-color);
+  background-color: var(--white);
+}
+
+.footer .footer-container .box a{
+  display: block;
+  font-size: 1.2rem;
+  padding: .7rem 0;
+  color: var(--white);
+  transition: .3s;
+  text-decoration: none;
+}
+
+.footer .footer-container .box a:hover{
+  text-decoration: underline;
+  color: var(--orange);
+  transform: scale(.9);
+}
+.footer .footer-container .box a i{
+  padding-right: .5rem;
+  color: var(--lightblue);
+  font-size: 1rem;
+}
+
+.footer .footer-container .box a i:hover{
+  padding-right: .5rem;
+}
+.map{
+  width: 100%;
+  border-radius: 5px;
+} 
+/* .........................End of Footer .........................*/
