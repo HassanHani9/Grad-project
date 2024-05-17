@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <!-- fontawsome  -->
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css.map" />
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/user-signup.css" />
+    <!-- bootstrap js-->
+    <script src="../javascript/bootstrap.js"></script>
+    <script src="../javascript/bootstrap.js.map"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="position-relative">
+    <!-- overlay -->
+    
+    <!-- Start signup section -->
+    <section class="position-relative">
+      <div class="con">
+        <div class="row">
+          <div class="left col-lg-3 col-md-3">
+            <div class="vh-100">
+              <video
+                src="../videos/30fd1f7b63806eff4db0d4276eb1ac45.mp4"
+                autoplay
+                muted
+                loop
+              ></video>
+            </div>
+          </div>
+          <div class="right col-lg-9 col-md-9 d-flex justify-content-lg-start">
+            <div class="righ-con p-4">
+              <h3 class="fw-bold">Sign up to FlexCareer</h3>
+              <form action="" class="sign-up m-4" id="sign-up-form">
+                <!-- first row in the form -->
+                <div class="rowone d-flex">
+                  <div class="name">
+                    <label for="FirstName" class="fw-bold">First Name</label>
+                    <br />
+                    <input
+                      type="text"
+                      name="name"
+                      id="FirstName"
+                      value="dfdf"
+                      required
+                    />
+                  </div>
+                  <div class="username">
+                    <label for="LastName" class="fw-bold">Last Name</label>
+                    <br />
+                    <input type="text" name="username" id="LastName"  value="dfdf" />
+                  </div>
+                </div>
+                <!-- second row in the form  -->
+                <div class="rowtwo mt-3">
+                  <label for="Email" class="fw-bold">Email</label>
+                  <br />
+                  <input type="email" id="Email" class="w-100" value="hdd@gmail.com" required />
+                </div>
+                <!-- Third row in the form -->
+                <div class="rowthree mt-3">
+                  <label for="Password" class="fw-bold">Password</label>
+                  <br />
+                  <input
+                    type="password"
+                    name="pass"
+                    id="Password"
+                    class="w-100"
+                    required
+                  />
+                </div>
+                <!-- fourth row -->
+                <div class="rowfour mt-3">
+                  <label for="con-Password" class="fw-bold"
+                    >Confirm Password</label
+                  >
+                  <br />
+                  <input
+                    type="password"
+                    name="conpass"
+                    id="con-Password"
+                    class="w-100"
+                    required
+                  />
+                </div>
+                <p class="demotext p-2 ">demo</p>
+                <!-- privacy and policy acceptance -->
+                <fieldset class="d-flex mt-3">
+                  <input
+                    type="checkbox"
+                    name="user-agree"
+                    id="userAgree"
+                    value="123"
+                    required
+                  />
+                  <label class="ms-2 mt fs-6"
+                    >I agree with FlexCareer Terms of Service, Privacy Policy,
+                    and default Notification Settings.</label
+                  >
+                </fieldset>
+                <!-- craete account button -->
+                <div class="mt-1 d-flex justify-content-center mt-5">
+                  <input
+                    type="submit"
+                    name="createaccout"
+                    value="Create Account"
+                    class="submit"
+                    
+                  />
+                </div>
+                <p class="text-center mt-2">
+                  Already have an account? <a href="#">sign in</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End signup section -->
+  </body>
+  <!-- Javascript file -->
+  <script src="../javascript/signup.js"></script>
+</html>

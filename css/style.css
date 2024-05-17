@@ -10,6 +10,7 @@ body {
   font-weight: 500;
   box-sizing: border-box;
 }
+
 /*......................... Start Navbar styling .........................*/
 .nav-con {
   background-color: var(--maincolor);
@@ -37,11 +38,49 @@ body {
 .nav-con nav .collapse li a {
   letter-spacing: 2px;
 }
+.nav-con .search-form{
+  max-width: 200px;
+}
+.nav-con .search-form .search{
+  border-radius: 13px;
+    width: 200px;
+    padding: 4px 35px;
+    border: transparent;
+    background-color: #c4c4c4;
+}
+.nav-con .search-form .search:focus{
+  outline: none;
+}
+.nav-con .search-form::after{
+  content: "\f002";
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  left: 10px;
+  font-weight: 900;
+  color: white;
+  top: 13%;
+
+}
 .nav-con button {
   color: white !important;
-  border-color: white;
+    border-color: white;
+    border-radius: 20px;
+    padding: 8px 17px;
+    transition: 0.7s;
 }
-.nav-con .login:hover {
+.nav-con .login{
+  padding: 0 10px;
+  cursor: pointer;
+}
+.nav-con .login:hover{
+  color: var(--orange) !important;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+.nav-con .signup:hover {
   background-color: var(--orange);
 }
 .nav-con .navbar-toggler:focus {
@@ -56,6 +95,24 @@ body {
   -ms-border-radius: 10%;
   -o-border-radius: 10%;
   border-width: 2px;
+}
+@media (min-width:1245px)   {
+  .nav-con .container-fluid .navbar-brand{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    
+}
+}
+@media (max-width:1091px) {
+  .nav-con .search-form {
+    display: none;
+}
+
 }
 /* .........................End Navbar styling .........................*/
 
@@ -636,3 +693,314 @@ color: var(--second-color);
   border-radius: 5px;
 } 
 /* .........................End of Footer .........................*/
+/* .........................Start signup page .........................*/
+.con .row .left video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.con .row .right {
+  padding: 20px;
+}
+.con .row .right .rowone .username {
+  margin-left: 10px;
+}
+.con .row .right input {
+  border: 1.5px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+.con .row .right form input:focus:not(.row .right fieldset input) {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(215, 146, 8, 0.142);
+}
+.con .row .right form fieldset input {
+  align-items: center;
+}
+.con .row .right .submit {
+  background-color: var(--maincolor);
+  width: 60%;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.con .row .right .demotext{
+  display: none;
+}
+.con .row .right h3{
+  padding-left: 25px;
+}
+@media (max-width:765px) {
+    .con .row .left{
+        display: none;
+    }
+    .con .row .right .rowone{
+        flex-direction: column;
+    }
+    .con .row .right{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .con .row .right .rowone{
+        flex-direction: column;
+    }
+    .con .row .right .rowone input{
+        width: 100%;
+    }
+    .con .row .right .rowone .username{
+        margin: 0;
+    }
+}
+/* .........................End signup page .........................*/
+
+/* .........................Start profile page......................... */
+.profile .con .firstcol .profile-pic img{
+  max-width: 350px;
+  position: relative;
+}
+.profile .con .firstcol .profile-pic::after{
+  content: '';
+  position: absolute;
+  left: -53px;
+  top: -68%;
+  border: 7px solid var(--lightblue);
+  width: 350px;
+  height: 368px;
+  transform: translateY(50%);
+  z-index: -1;
+}
+.profile .con .firstcol{
+padding:150px
+}
+.profile .con .firstcol .head h1::before{
+  transform: translateY(-50%);
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  width: 5px;
+  height: 50%;
+  background-color: var(--lightblue);
+}
+.profile .con .information .thrdrow a{
+  padding: 11px 29px;
+  border: 2px solid transparent;
+  color: #212529;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: var(--lightblue);
+  color: white;
+}
+@media (max-width:992px) {
+  .profile .con .firstcol{
+    padding:40;
+    }
+    .profile .con .firstcol .profile-pic img{
+      max-width: 400px;
+    }
+  .profile .con .firstcol .profile-pic::after{
+    content: none;
+  }
+  .profile .con .firstcol .profile-pic{
+    text-align: center;
+  }
+}
+@media (max-width:600px){
+  .profile .con .firstcol .profile-pic img{
+    max-width: 200px;
+  }
+  .profile .con .firstcol{
+    padding:10px 0;
+    }
+}
+
+/* .........................End profile page .........................*/
+
+/* .........................Start varification page......................... */
+body .overlayone{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.578) ;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: block;
+}
+body .overlaytwo{
+      width: 500px;
+      height: 400px;
+      z-index: 200;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: #ffff;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      display: block;
+}
+.otp-field {
+  flex-direction: row;
+  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-field input {
+  height: 45px;
+  width: 42px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.overlaytwo .wrongcode{
+  display: none;
+  color: red !important;
+}
+.otp-field input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.132);
+}
+.otp-field input::-webkit-inner-spin-button,
+.otp-field input::-webkit-outer-spin-button {
+  display: none;
+}
+
+.resend {
+  font-size: 12px;
+}
+
+.otp-field .footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: black;
+  font-size: 12px;
+  text-align: right;
+  font-family: monospace;
+}
+
+.otp-field .footer a {
+  color: black;
+  text-decoration: none;
+}
+/* Start login */
+.login {
+	margin:10% auto 0 auto;
+	padding:30px;
+	width:400px;
+	height:auto;
+	overflow:hidden;
+	background:white;
+	border-radius:10px;
+}
+
+.login label {
+	font-size:14px;
+	color:darkgray;
+	cursor:pointer;
+}
+
+.login label,
+.login input {
+	float:left;
+	clear:both;
+}
+
+.login input {
+	margin:15px 0;
+	padding:15px 10px;
+	width:100%;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+	display:inline-block;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+  .login #email:focus{
+    border: 1px solid var(--lightblue);
+  }
+  .login input[type="password"]:focus {
+    border-color:var(--lightblue);
+  }
+
+.login input[type=submit] {
+	padding:15px 50px;
+	width:auto;
+	background:var(--lightblue);
+	border:none;
+	color:white;
+	cursor:pointer;
+	display:inline-block;
+	float:right;
+	clear:right;
+	-webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+.login input[type=submit]:hover {
+	opacity:0.8;
+}
+
+.login input[type="submit"]:active {
+	opacity:0.4;
+}
+
+.forgot,
+.register {
+	margin:10px;
+	float:left;
+	clear:left;
+	display:inline-block;
+	color:cornflowerblue;
+	text-decoration:none;
+}
+
+.forgot:hover,
+.register:hover {
+	color:darkgray;
+}
+
+#logo {
+	margin:0 auto;
+	width:300px;
+	font-size:30px;
+	font-weight:bold;
+	text-align:center;
+	color:lightgray;
+	-webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+#logo:hover {
+	color:cornflowerblue;
+}
+/* End login */
